@@ -51,21 +51,7 @@ public class DayOne implements Solution {
     @Override
     public void solutionOne(String fileName) {
 
-        List<String> exampleInputLoc = new ArrayList<>();
-        String line;
-
-        try (FileInputStream fis = new FileInputStream(fileName);
-             BufferedReader reader = new BufferedReader(new InputStreamReader(fis))
-        ) {
-            while ((line = reader.readLine()) != null) {
-                exampleInputLoc.add(line);
-
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        List<String> exampleInputLoc = readInput(fileName);
 
 
         int start = 50;
@@ -144,30 +130,12 @@ public class DayOne implements Solution {
     public void solutionTwo(String fileName) {
         Result res = new Result(50, 0);
 
-        List<String> exampleInputLoc = new ArrayList<>();
-        String line;
-
-        try (FileInputStream fis = new FileInputStream(fileName);
-             BufferedReader reader = new BufferedReader(new InputStreamReader(fis))
-        ) {
-            while ((line = reader.readLine()) != null) {
-                exampleInputLoc.add(line);
-
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        List<String> exampleInputLoc = readInput(fileName);
 
         List<Integer> steps = exampleInputLoc.stream().map(this::parseStep).toList();
 
         for(var s : steps) {
-            // System.out.println("DEBUG input: " + s);
-            System.out.println("DEBUG - step:" + s);
             turnV2(s, res);
-            System.out.println("DEBUG - new start:" + res.getStart());
-            System.out.println("\t\t zeroCount: " + res.getZeroCount());
         }
 
         System.out.println("Day 1, part II: " + res.getZeroCount());
