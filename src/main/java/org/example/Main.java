@@ -9,19 +9,19 @@ public class Main {
         System.out.println("------------------------------");
 
         Solution dayOne = new DayOne();
-        dayOne.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_one_p1.txt");
-        dayOne.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_one_p1.txt");
+        dayOne.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_one_p1.txt");
+        dayOne.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_one_p1.txt");
 
         System.out.println("------------------");
 
         Solution dayTwo = new DayTwo();
-        dayTwo.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
-        dayTwo.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
+        dayTwo.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
+        dayTwo.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
 
         System.out.println("------------------");
 
         Solution dayThree = new DayThree();
-        dayThree.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
-        dayThree.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
+        dayThree.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
+        dayThree.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
     }
 }

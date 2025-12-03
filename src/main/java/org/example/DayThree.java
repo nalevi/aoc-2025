@@ -13,7 +13,9 @@ public class DayThree implements Solution {
     );
     @Override
     public void solutionOne(String fileName) {
-        int result = exampleInput.stream().map(this::maxJoltage).reduce(0, Integer::sum);
+        List<String> input = readInput(fileName);
+        //long result = exampleInput.stream().map(this::maxJoltage).reduce(0L, Long::sum);
+        long result = input.stream().map(this::maxJoltage).reduce(0L, Long::sum);
         System.out.println("Day 3, part I: " + result);
 
     }
@@ -23,11 +25,11 @@ public class DayThree implements Solution {
 
     }
 
-    private int maxJoltage(String bank) {
-        int maxNum = 0;
+    private long maxJoltage(String bank) {
+        long maxNum = 0;
         for(int i = 0; i < bank.length() - 1; i++){
             for(int j = i + 1; j < bank.length(); j++){
-                int newMax = Integer.parseInt(bank.substring(i, j));
+                long newMax = Long.parseLong(bank.charAt(i) + "" + bank.charAt(j));
                 if (maxNum < newMax) {
                     maxNum = newMax;
                 }
