@@ -78,11 +78,9 @@ public class DayTwo implements Solution {
         List<Long> resultIds = new ArrayList<>();
 
         for (var range : ranges) {
-            System.out.println(" Range: " + range);
             resultIds.addAll(collectInvalidIdsV2(range));
         }
 
-        resultIds.forEach(System.out::println);
         var result = resultIds.stream().reduce(0L, Long::sum);
         System.out.println("Day 2, part II: " + result);
 

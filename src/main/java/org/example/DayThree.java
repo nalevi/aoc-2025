@@ -1,7 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class DayThree implements Solution {
 
@@ -14,7 +16,6 @@ public class DayThree implements Solution {
     @Override
     public void solutionOne(String fileName) {
         List<String> input = readInput(fileName);
-        //long result = exampleInput.stream().map(this::maxJoltage).reduce(0L, Long::sum);
         long result = input.stream().map(this::maxJoltage).reduce(0L, Long::sum);
         System.out.println("Day 3, part I: " + result);
 
@@ -22,7 +23,9 @@ public class DayThree implements Solution {
 
     @Override
     public void solutionTwo(String fileName) {
-
+        List<String> input = readInput(fileName);
+        long result = input.stream().map(this::maxJoltageV2).reduce(0L, Long::sum);
+        System.out.println("Day 3, part II: " + result);
     }
 
     private long maxJoltage(String bank) {
@@ -37,5 +40,27 @@ public class DayThree implements Solution {
         }
 
         return maxNum;
+    }
+
+    private long maxJoltageV2(String bank) {
+        int n = bank.length();
+        int digits = 12;
+        StringBuilder result = new StringBuilder();
+
+        int start = 0;
+        for (int i = 0; i < digits; i++) {
+            int maxIdx = start;
+            char maxDigit = bank.charAt(start);
+            int end = n - (digits - i);
+            for (int j = start; j <= end; j++) {
+                if (bank.charAt(j) > maxDigit) {
+                    maxDigit = bank.charAt(j);
+                    maxIdx = j;
+                }
+            }
+            result.append(maxDigit);
+            start = maxIdx + 1;
+        }
+        return Long.parseLong(result.toString());
     }
 }
