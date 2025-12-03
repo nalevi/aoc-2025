@@ -17,5 +17,11 @@ public class Main {
         Solution dayTwo = new DayTwo();
         dayTwo.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
         dayTwo.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_two.txt");
+
+        System.out.println("------------------");
+
+        Solution dayThree = new DayThree();
+        dayThree.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
+        dayThree.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_three.txt");
     }
 }
