@@ -6,24 +6,6 @@ import java.util.List;
 import java.util.stream.LongStream;
 
 public class DayTwo implements Solution {
-    class Range {
-        long start;
-        long end;
-
-        public Range(long start, long end) {
-            this.start = start;
-            this.end = end;
-        }
-
-        @Override
-        public String toString() {
-            return "Range{" +
-                    "start=" + start +
-                    ", end=" + end +
-                    '}';
-        }
-    }
-
     List<String> exampleInput = List.of("11-22",
             "95-115",
             //"11110-11111" ,
