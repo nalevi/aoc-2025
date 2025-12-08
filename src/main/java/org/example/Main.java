@@ -35,5 +35,11 @@ public class Main {
         Solution dayFive = new DayFive();
         dayFive.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_five.txt");
         dayFive.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_five.txt");
+
+        System.out.println("------------------");
+
+        Solution daySix = new DaySix();
+        daySix.solutionOne("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_six.txt");
+        daySix.solutionTwo("/Users/nalevi/IdeaProjects/aoc-2025/src/main/resources/day_six.txt");
     }
 }

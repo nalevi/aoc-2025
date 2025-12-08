@@ -48,7 +48,7 @@ public class DayFive implements Solution {
         List<String> input = readInput(fileName);
         List<Range> parsedRanges = new ArrayList<>();
         int l = 1;
-        String line = input.getFirst();
+        String line = input.get(0);
         while (l < input.size() && !line.isEmpty()) {
             parsedRanges.add(parseRanges(line));
             line = input.get(l++);
