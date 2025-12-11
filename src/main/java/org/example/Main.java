@@ -44,8 +44,12 @@ public class Main {
 //
 //        System.out.println("------------------");
 
-        Solution daySeven = new DaySeven();
-        daySeven.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_seven.txt");
-        daySeven.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_seven.txt");
+//        Solution daySeven = new DaySeven();
+//        daySeven.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_seven.txt");
+//        daySeven.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_seven.txt");
+
+        Solution dayEight = new DayEight();
+        dayEight.solutionOne("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_eight.txt");
+        dayEight.solutionTwo("/home/lnagy/IdeaProjects/aoc-2025/src/main/resources/day_eight.txt");
     }
 }
